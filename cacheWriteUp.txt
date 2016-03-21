@@ -1,0 +1,19 @@
+CS 222: Computer Architecture
+Cache Assignment Write-Up
+Colin Van Oort
+
+Code Structure and Difficulties:
+	I built my code in a bottom up fashion, starting with the Cache_Block object and building up into the driver file Simulation.cpp. Most of the code comments will be found in the .hpp files while the .cpp files contain sparse descritions to help readability and comprehension of unclear portions of code. The code can be run, if so desired, by executing the included shell script (.sh file extension). Please be aware that the config and trace file paths are hard coded on lines 26 and 31 of the Simulation.cpp respectively, should you want to verify any of my output files.
+
+	This was one of my first projects working with C++ and I ran into some issues with including the correct libraries and headers which cause some significant delays. Debugging certain errors (segmentation faults) related to missing or incorrect includes was a fairly tedious and difficult task. Another difficulty was in verifying the correctness of my cache simulation, with errors in the reference material (the provided output files) until only a short while before the deadline, I find it hard to be completely sure of my simulation's accuracy.
+
+
+Results:
+	You can find my outputs for various configurations in the folder labeled GeneratedOutputs, the first few lines of each output file denote the config and header file used.
+
+
+Comparison of Real Trace Data and Random Trace Data:
+	When comparing the real trace data with the random trace data (using the same cache configuration) the most striking difference is the miss rates. Where the real trace data creates miss rates between ~20% in the L1 i cache and ~1% in the L2 c cache, the random trace data creates extremely high miss rates. This makes sense intuitively because caches operate on the principle of temporal and spatial locality, so if the data is random then it most likely won't have much locality.
+
+Effects of Varying Parameters:
+	In order to observe the effects of altering the cache parameters on a set of operations I ran the gcc-addrs-10M.trace with four different configurations (base, i7, opteron, z10). One of the easiest trends to spot is that as cache size increases, the miss rate decreases; again this makes intuitive sense because as the cache size increases we have more cache that we can allocate before blocks need to be replaced so our number of misses will asymptotically approach the number of compulsory cache misses as cache size increases. Number of set ways appears to have a similar effect, but to a lesser degree due to the smaller variations in number of set ways between different cache configurations. One last observation, it appears that the cache replacement strategy has a relatively small effect on the cache miss rate when compared to things like cache size, so one might assume that the best replacement strategy would then be the simlplest strategy to implement at the hardware level in order to reduce system cost.

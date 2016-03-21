@@ -1,0 +1,30 @@
+BEGIN SIMULATION**********************************************************
+Config File: ../Configs/base.config
+Trace File: ../Traces/gcc-addrs-10M.trace
+Config file opened successfully
+Trace file opened successfully
+Building Cache Object: L1 i 4096 bytes, 16 byte blocks, 2 ways,  Replace = oldest, Write Back = yes, Write Allocate = yes
+Building Cache Object: L1 d 4096 bytes, 16 byte blocks, 2 ways,  Replace = oldest, Write Back = yes, Write Allocate = yes
+Building Cache Object: L2 c 131072 bytes, 64 byte blocks, 4 ways,  Replace = oldest, Write Back = yes, Write Allocate = yes
+L1 i: 
+	Reads: 7678614
+	Writes: 0
+	Accesses: 7678614
+	Misses: 1343740(Write: 0 Read: 1343740 )
+	Miss Rate: 17.4998% (Write: -nan% Read: 17.4998% )
+
+L1 d: 
+	Reads: 2104287
+	Writes: 1035871
+	Accesses: 3140158
+	Misses: 201764(Write: 55540 Read: 146224 )
+	Miss Rate: 6.42528% (Write: 5.36167% Read: 6.94886% )
+
+L2 c: 
+	Reads: 2104287
+	Writes: 1035871
+	Accesses: 3140158
+	Misses: 5309(Write: 651 Read: 4658 )
+	Miss Rate: 0.169068% (Write: 0.0628457% Read: 0.221358% )
+
+END SIMULATION************************************************************

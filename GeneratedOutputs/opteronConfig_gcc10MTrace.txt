@@ -1,0 +1,30 @@
+BEGIN SIMULATION**********************************************************
+Config File: ../Configs/opteron.config
+Trace File: ../Traces/gcc-addrs-10M.trace
+Config file opened successfully
+Trace file opened successfully
+Building Cache Object: L1 i 65536 bytes, 64 byte blocks, 2 ways,  Replace = oldest, Write Back = no, Write Allocate = no
+Building Cache Object: L1 d 65536 bytes, 64 byte blocks, 2 ways,  Replace = oldest, Write Back = no, Write Allocate = no
+Building Cache Object: L2 c 524288 bytes, 64 byte blocks, 16 ways,  Replace = oldest, Write Back = no, Write Allocate = no
+L1 i: 
+	Reads: 7678614
+	Writes: 0
+	Accesses: 7678614
+	Misses: 75924(Write: 0 Read: 75924 )
+	Miss Rate: 0.988772% (Write: -nan% Read: 0.988772% )
+
+L1 d: 
+	Reads: 2104287
+	Writes: 1035871
+	Accesses: 3140158
+	Misses: 22567(Write: 9855 Read: 12712 )
+	Miss Rate: 0.718658% (Write: 0.951373% Read: 0.6041% )
+
+L2 c: 
+	Reads: 2104287
+	Writes: 1035871
+	Accesses: 3140158
+	Misses: 6799(Write: 2710 Read: 4089 )
+	Miss Rate: 0.216518% (Write: 0.261616% Read: 0.194318% )
+
+END SIMULATION************************************************************

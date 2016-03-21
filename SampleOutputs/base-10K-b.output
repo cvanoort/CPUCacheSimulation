@@ -1,0 +1,40 @@
+Building memory model
+
+Building cache model: C2, 131072 bytes, 64 byte blocks, 4 way set associative, 512 sets, verbose F, 
+	oldest replacement, block offset mask 3f, index mask  (shifted) 1ff, tag mask ffffffffffff8000
+	write allocate true, write back true
+
+Building cache model: I1, 4096 bytes, 16 byte blocks, 2 way set associative, 128 sets, verbose F, 
+	oldest replacement, block offset mask f, index mask  (shifted) 7f, tag mask fffffffffffff800
+	write allocate true, write back true
+
+Building cache model: D1, 4096 bytes, 16 byte blocks, 2 way set associative, 128 sets, verbose F, 
+	oldest replacement, block offset mask f, index mask  (shifted) 7f, tag mask fffffffffffff800
+	write allocate true, write back true
+
+
+Cache I1: size 4096, block size 16, 2 way set associative, 128 sets
+	write allocate true, write back true
+	7098 accesses (7098 reads, 0 writes),
+	787 misses (787 read, 0 write),
+	local miss rate 11.0876% (11.0876% read, 0% write)
+	787 blocks allocated, 535 replacements, 0 write backs sent, 0 reads sent for write allocate
+
+
+Cache D1: size 4096, block size 16, 2 way set associative, 128 sets
+	write allocate true, write back true
+	2948 accesses (1886 reads, 1062 writes),
+	384 misses (281 read, 103 write),
+	local miss rate 13.0258% (14.8993% read, 9.69868% write)
+	384 blocks allocated, 161 replacements, 83 write backs sent, 103 reads sent for write allocate
+
+
+Cache C2: size 131072, block size 64, 4 way set associative, 512 sets
+	write allocate true, write back true
+	1254 accesses (1171 reads, 83 writes),
+	450 misses (450 read, 0 write),
+	local miss rate 35.8852% (38.4287% read, 0% write)
+	450 blocks allocated, 0 replacements, 0 write backs sent, 0 reads sent for write allocate
+
+
+Memory: 450 accesses (450 reads, 0 writes)

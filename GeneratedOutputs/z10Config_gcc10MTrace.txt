@@ -1,0 +1,30 @@
+BEGIN SIMULATION**********************************************************
+Config File: ../Configs/z10.config
+Trace File: ../Traces/gcc-addrs-10M.trace
+Config file opened successfully
+Trace file opened successfully
+Building Cache Object: L1 i 65536 bytes, 256 byte blocks, 4 ways,  Replace = oldest, Write Back = no, Write Allocate = no
+Building Cache Object: L1 d 131072 bytes, 256 byte blocks, 8 ways,  Replace = oldest, Write Back = no, Write Allocate = no
+Building Cache Object: L2 c 1572864 bytes, 256 byte blocks, 12 ways,  Replace = oldest, Write Back = no, Write Allocate = no
+L1 i: 
+	Reads: 7678614
+	Writes: 0
+	Accesses: 7678614
+	Misses: 48236(Write: 0 Read: 48236 )
+	Miss Rate: 0.628186% (Write: -nan% Read: 0.628186% )
+
+L1 d: 
+	Reads: 2104287
+	Writes: 1035871
+	Accesses: 3140158
+	Misses: 5260(Write: 2225 Read: 3035 )
+	Miss Rate: 0.167507% (Write: 0.214795% Read: 0.144229% )
+
+L2 c: 
+	Reads: 2104287
+	Writes: 1035871
+	Accesses: 3140158
+	Misses: 2830(Write: 1166 Read: 1664 )
+	Miss Rate: 0.0901229% (Write: 0.112562% Read: 0.0790767% )
+
+END SIMULATION************************************************************

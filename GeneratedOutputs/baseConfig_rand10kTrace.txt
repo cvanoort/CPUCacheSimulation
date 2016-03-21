@@ -1,0 +1,31 @@
+BEGIN SIMULATION**********************************************************
+Config File: ../Configs/base.config
+Trace File: ../Traces/rand-500Mspace-10K.trace
+Config file opened successfully
+Trace file opened successfully
+Building Cache Object: L1 i 4096 bytes, 16 byte blocks, 2 ways,  Replace = oldest, Write Back = yes, Write Allocate = yes
+Building Cache Object: L1 d 4096 bytes, 16 byte blocks, 2 ways,  Replace = oldest, Write Back = yes, Write Allocate = yes
+Building Cache Object: L2 c 131072 bytes, 64 byte blocks, 4 ways,  Replace = oldest, Write Back = yes, Write Allocate = yes
+
+L1 i: 
+	Reads: 7391
+	Writes: 0
+	Accesses: 7391
+	Misses: 7391(Write: 0 Read: 7391 )
+	Miss Rate: 100% (Write: -nan% Read: 100% )
+
+L1 d: 
+	Reads: 2012
+	Writes: 597
+	Accesses: 2609
+	Misses: 2609(Write: 597 Read: 2012 )
+	Miss Rate: 100% (Write: 100% Read: 100% )
+
+L2 c: 
+	Reads: 2012
+	Writes: 597
+	Accesses: 2609
+	Misses: 2609(Write: 597 Read: 2012 )
+	Miss Rate: 100% (Write: 100% Read: 100% )
+
+END SIMULATION************************************************************
